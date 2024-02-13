@@ -21,7 +21,7 @@
                 That’s why we decided to stop supporting your current browser or your browser version. To access our
                 website,
                 please download one of the browsers below.</p><br>
-              <button v-if="this.btn === true" class="w-1/3 btn btn-secondary btn-outline rounded-none">How do I update my
+              <button v-if="this.btn === true" class="w-1/3 btn btn-secondary btn-outline rounded-none" aria-label="Update Button">How do I update my
                 browser?</button>
             </div>
           </div>
@@ -39,10 +39,10 @@
             </div>
           </div><br>
           <div v-if="this.btn === true" class="flex flex-row justify-center">
-            <button class="btn  btn-secondary btn-outline rounded-none">Download</button>
+            <button class="btn btn-secondary btn-outline rounded-none" :aria-label="item.browser + ' Download Button'">Download</button>
           </div>
           <div v-else class="flex items-center">
-            <button class="btn btn-square btn-ghost float-right">
+            <button class="btn btn-square btn-ghost float-right" :aria-label="item.browser + ' Download Button btn-xs'">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="download">
                 <path fill="none" stroke="white" stroke-width="3" d="M38 18h-8V6H18v12h-8l14 14 14-14zM10 36v4h28v-4H10z">
                 </path>
